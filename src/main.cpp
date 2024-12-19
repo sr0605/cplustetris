@@ -1,6 +1,6 @@
 #include <raylib.h>
 #include "grid.h"
-#include <iostream>
+#include "blocks.cpp"
 
 
 int main() 
@@ -9,23 +9,19 @@ int main()
     SetTargetFPS(60);
 
     Color darkBlue = {44, 44, 127, 255};
-
     Grid grid = Grid();
     grid.Print();
 
+    LBlock block = LBlock();
 
 
     while(WindowShouldClose() == false){
         BeginDrawing();
         ClearBackground(darkBlue);
         grid.Draw();
-
-
-
+        block.Draw();
         EndDrawing();
     }
-
-
 
 
 
