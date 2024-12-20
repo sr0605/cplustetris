@@ -5,14 +5,15 @@
 
 int main() 
 {
+    Color darkBlue = {44, 44, 127, 255};
     InitWindow(300, 600, "TetrisClone");
     SetTargetFPS(60);
 
-    Color darkBlue = {44, 44, 127, 255};
+
     Grid grid = Grid();
     grid.Print();
 
-    LBlock block = LBlock();
+    TBlock block = TBlock();
 
 
     while(WindowShouldClose() == false){
